@@ -38,8 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'asistencia',
-    'solicitudes'
+    'solicitudes',
 ]
+MEDIA_URL = "/media/"
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+MEDIA_ROOT = BASE_DIR / "media"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
